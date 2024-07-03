@@ -24,16 +24,26 @@ func ReadUsers (users *[]models.User) {
 
 // UpdateUser is a function that updates a user in the database based on the user's ID.
 
-func UpdateUser (user *models.User, context *gin.Context) {
-	config.DB.Where("id= ?", context.Param("id")).First(user)
-	config.DB.Save(user)
-	fmt.Println("successfully updated user")
+func UpdateUser (updatedUser *models.User, context *gin.Context) {
+
+	// retrieve the previous user by ID
+	var user models.User
+	result:=config.DB.First(&user, context.Param("id"))
+	if result.Error != nil {
+		fmt.Println(result.Error) // prints error if the user is not found
+	}
+
+	// updating the user with the new user data
+	result = config.DB.Model(&user).Updates(updatedUser)
+    if result.Error != nil {
+        fmt.Println(result.Error) // prints error if the update operation fails
+    }
+	fmt.Println("Record updated successfully")
 }
 
 // DeleteUser is a function that deletes a user from the database based on the user's ID.
 
 func DeleteUser (user *models.User, context *gin.Context) {
 	config.DB.Where("id= ?", context.Param("id")).Delete(&user)
-	context.JSON(200, &user)
 	fmt.Println("successfully deleted user")
 }

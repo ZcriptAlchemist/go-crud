@@ -8,9 +8,13 @@ import (
 // *gin.Engine is a pointer to the instance of the Gin router aka a web server
 
 func UserRoute(router *gin.Engine) {
-	// router.GET("/", controller.UserController)
-	router.GET("/users/get", controller.GetUsers)
+	// create
 	router.POST("/users/create", controller.CreateUser)
-	router.DELETE("/users/delete/:id", controller.DeleteUser)
+	// read
+	router.GET("/users/get", controller.GetUsers)
+	// update
 	router.PUT("/users/update/:id", controller.UpdateUser)
+	// delete
+	router.DELETE("/users/delete/:id", controller.DeleteUser)
+	
 }

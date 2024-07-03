@@ -13,4 +13,5 @@ import (
 func DeleteUser (context *gin.Context) {
 	var user models.User
 	DAO.DeleteUser(&user, context)
+	context.JSON(200, &user)
 }

@@ -12,5 +12,5 @@ func UpdateUser (context *gin.Context) {
 	var user models.User
     context.BindJSON(&user)
 	DAO.UpdateUser(&user, context)
-    context.JSON(200, &user)
+	context.JSON(200, &user)
 }
