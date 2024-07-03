@@ -8,6 +8,7 @@ import (
 	"gorm.io/gorm"
 )
 
+// DB is a pointer to the GORM DB instance and is declared globally.
 var DB *gorm.DB
 
 func Connect() {
