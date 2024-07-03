@@ -2,16 +2,16 @@
 
 Simple CRUD operations API in GO using GIN and GORM.
 
-## CRUD stands for
+## CRUD Stands For
 
 - Create
 - Read
 - Update
 - Delete
 
-## GORM and GIN
+## GORM And GIN
 
-### What is GORM?
+### What Is GORM?
 
 GORM is an ORM (Object-Relational Mapping) library for Golang. It provides a developer-friendly way to interact with databases by abstracting away the complexity of direct SQL queries. Instead, developers can work with Go structs to perform database operations, making the code more readable, maintainable, and secure.
 
@@ -25,7 +25,7 @@ GORM is an ORM (Object-Relational Mapping) library for Golang. It provides a dev
 - **Query Building**: Powerful, flexible query builder.
 - **Community**: Active support and extensive documentation.
 
-### Alternatives to GORM
+### Alternatives To GORM
 
 1. **SQLBoiler**: Strong type safety, generates code from schema, but complex setup.
 2. **Ent (Entgo.io)**: Type-safe, schema management in Go, steep learning curve.
@@ -41,7 +41,7 @@ GORM is an ORM (Object-Relational Mapping) library for Golang. It provides a dev
 - **Flexibility**: Suitable for simple and complex use cases.
 - **Mature and Stable**: Well-tested, fewer bugs.
 
-### what is GIN?
+### What Is GIN?
 
 Gin is a high-performance HTTP web framework written in Go (Golang). It is designed for building APIs and web services, offering simplicity and speed.
 
@@ -54,7 +54,7 @@ Gin is a high-performance HTTP web framework written in Go (Golang). It is desig
 - **JSON Handling**: Efficient JSON handling and rendering.
 - **Community**: Large, active community with extensive documentation.
 
-### Alternatives to Gin
+### Alternatives To Gin
 
 1. **Echo**: High performance, middleware support, but slightly more complex.
 2. **Fiber**: Inspired by Express.js, very fast, but newer with a smaller community.
