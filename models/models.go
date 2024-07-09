@@ -2,8 +2,7 @@ package models
 
 import "gorm.io/gorm"
 
-// User struct defines the scheme
-
+// User struct defines the schema for the table in the database.
 type User struct {
 	gorm.Model
 	// Id int `json:"ID" gorm:"primary_key"`

@@ -6,7 +6,6 @@ import (
 )
 
 // *gin.Engine is a pointer to the instance of the Gin router aka a web server
-
 func UserRoute(router *gin.Engine) {
 	// create
 	router.POST("/users/create", controller.CreateUser)
